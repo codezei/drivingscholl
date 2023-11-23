@@ -1,0 +1,46 @@
+// GENERAL PROJECT STYLES
+img {
+    max-width: 100%;
+}
+:root {
+    --main-dark-bg: #1c1c26;
+    --main-dark-bg-lighten: #21202f;
+    --main-dark-text: #fffade;
+    --main-light-bg: #fffade;
+    --main-light-text: #1c1c26;
+}
+
+
+.bg-dark {
+    background-color: var(--main-dark-bg);
+    color: var(--main-dark-text);
+}
+
+.block {
+    padding: 60px 0;
+}
+.btn {
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #b11212;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 5px 5px 5px #4a0101;
+    cursor: pointer;
+}
+.btn:hover {
+    color: #fff;
+}
+.title {
+    margin-bottom: 50px;
+}
+.tcenter {
+    text-align: center;
+}
