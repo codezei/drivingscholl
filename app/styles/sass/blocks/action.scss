@@ -1,0 +1,18 @@
+.action {
+    &__title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    &__inner {
+        // background-color: var(--bg-primary);
+        // color: var(--text-primary);
+        // border-radius: 1rem;
+        // padding: 1.5rem;
+    }
+    &__video {
+        width: 100%;
+        display: block;
+        aspect-ratio: 16/9;
+        margin-bottom: 1rem;
+    }
+}

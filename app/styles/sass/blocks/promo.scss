@@ -1,21 +1,49 @@
 .promo {
+    &__title {
+        margin-bottom: 2rem;
+        line-height: 1.1;
+        // text-align: center;
+        span {
+            @supports (background-clip: text) {
+                -webkit-text-fill-color: transparent;
+                text-fill-color: transparent;
+                background: -o-linear-gradient(315deg,#0174be 0,#36d7ff 55.97%,#0c356a 100%);
+                background: linear-gradient(135deg,#0174be,#36d7ff 55.97%,#0c356a);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: #36d7ff;
+            }
+        }
+
+
+
+        
+    }
+    &__subtitle {
+        margin-bottom: 2rem;
+    }
+    &__description {
+        margin-bottom: 1rem;
+    }
 
     &__inner {
         display: flex;
         /* flex-wrap: wrap; */
         justify-content: space-between;
     }
-    &__advantage {
-        max-width: 600px;
+    &__list {
+        list-style-image: url(../images/dist/traffic-cone.png);
+        margin-bottom: 1.5rem;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
     }
     &__btn {
-        margin-bottom: 25px;
+        margin-bottom: 1.5rem;
     }
-    &__subtitle {
-        font-size: 1em;
-        font-weight: 400;
-        margin-bottom: 25px;
-    }
+
     // &__info {
     //     position: relative;
     //     &:before {

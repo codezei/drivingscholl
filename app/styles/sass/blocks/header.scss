@@ -5,6 +5,8 @@
     z-index: 10;
     box-shadow: 0 0 10px #121212;
     backdrop-filter: blur(10px);
+    background-color: var(--bg-secondary-dark);
+    color: var(--text-secondary);
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -22,31 +24,55 @@
     text-decoration: none;
     color: inherit;
     transition: all 400ms;
-    &:hover {
-        opacity: 0.6;
+    position: relative;
+    font-family: 'Oswald';
+    &:before {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 0;
+        background-color: var(--bg-primary);
+        box-shadow: 0;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        transition: all 400ms;
     }
+    &:hover::before {
+        width: 100%;
+        box-shadow: 1px 1px 5px var(--bg-primary);
+    }
+
 }
 
 .logo {
-    display: inline-block;
-    margin: 0;
-
-    &__img {
-        max-width: 150px;
-        width: 100%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-    &__text {
-        padding: 10px 30px;
-        border: 3px solid rgb(203, 14, 14);
-        border-radius: 50px 50px 5px 5px;
-        text-align: center;
-        font-size: 20px;
-        background: #fff;
-        color: #222;
-    }
+    width: 100px;
+    mix-blend-mode: multiply;
 }
 
+// .logo {
+//     display: inline-block;
+//     margin: 0;
+
+//     &__img {
+//         max-width: 150px;
+//         width: 100%;
+//         display: block;
+//         margin-left: auto;
+//         margin-right: auto;
+//         display: block;
+//     }
+//     &__text {
+//         padding: 10px 30px;
+//         border: 3px solid rgb(203, 14, 14);
+//         border-radius: 50px 50px 5px 5px;
+//         text-align: center;
+//         font-size: 20px;
+//         background: #fff;
+//         color: #222;
+//     }
+// }
+
+// .logo {
+//     color: var(--bg-primary);
+// }

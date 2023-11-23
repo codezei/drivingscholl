@@ -1,0 +1,20 @@
+.advantages {
+    &__col {
+        margin-top: 30px;
+    }
+    &__img {
+        border-radius: 1rem;
+    }
+    &__row {
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+    }
+    &__alert {
+        padding: 80px;
+        border-radius: 3rem;
+    }
+}

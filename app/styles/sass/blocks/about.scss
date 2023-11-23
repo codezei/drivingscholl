@@ -1,0 +1,17 @@
+.about {
+    &__list {
+        list-style-image: url(../images/dist/traffic-cone.png);
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+    }
+    &__img {
+        padding: 20px 0 0 20px;
+        img {
+            border-radius: 1rem;
+            box-shadow: -20px -20px 0 var(--bg-primary);
+        }
+    }
+}
