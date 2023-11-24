@@ -27,12 +27,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #434a57;
+        background-color: var(--bg-secondary);
         color: #fff;
+        &:hover {
+            background: var(--bg-secondary-dark);
+        }
         &.swiper-button-disabled {
-            background-color: #E8EDEF;
-            color: #434A57;
-            opacity: 1;
+            // background-color: var(--bg-secondary-dark);
+            // color: var(--bg-primary-light);
+            opacity: 0.4;
         }
     }
 

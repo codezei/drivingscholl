@@ -1,4 +1,5 @@
 .process {
+    overflow: hidden;
     &__list {
         counter-reset: process-item; 
     }
@@ -41,5 +42,14 @@
     }
     &__img {
         max-width: 300px;
+    }
+    @media screen and (max-width: 575px) {
+        &__item {
+            padding-left: 50px;
+            &:before {
+                left: 0.5rem;
+                font-size: 50px;
+            }
+        }
     }
 }

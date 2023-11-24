@@ -1,0 +1,35 @@
+.groups__col {
+    margin-bottom: 30px;
+}
+
+.group {
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+    background-color: var(--bg-secondary);
+    box-shadow: 15px 15px 0 var(--bg-primary);
+    color: #fff;
+    text-align: center;
+    height: 100%;
+    transition: all 400ms;
+    &:hover {
+        box-shadow: 0px 0px 0 var(--bg-primary);
+    }
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+    &__list {
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+    &__item {
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+        span {
+            font-weight: 500;
+            font-family: 'Oswald';
+            font-size: 1.5em;
+        }
+    }
+}

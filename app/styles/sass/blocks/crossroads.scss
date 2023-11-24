@@ -4,29 +4,13 @@
     flex-wrap: wrap;
     max-width: 650px;
     position: relative;
-    &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        background-image: url(../images/dist/promo-bg.jpeg);
-        background-size: contain;
-        background-position: bottom left;
-        background-repeat: no-repeat;
-        opacity: 0.05;
-        left: 60%;
-        bottom: 60%;
-        transform: scale(-1, 1);
-        z-index: -1;
-    }
+
     &__row {
         display: flex;
         align-items: center;
     }
     &__school {
         text-align: center;
-        /* width: 100%; */
     }
     &__title {
         border-radius: 0.5rem;
@@ -35,7 +19,6 @@
         text-transform: uppercase;
         font-weight: 700;
         background: var(--bg-secondary);
-        // border: 5px solid rgb(173, 24, 24);
         color: #fff;
     }
     &__item {
@@ -96,6 +79,37 @@
             flex-shrink: 0;
             height: calc(33.33% + 20px);
         
+        }
+    }
+
+    @media screen and (max-width: 1199px) {
+        &__item {
+            &-title {
+                font-size: 13px;
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &__item {
+            padding-bottom: 30px;
+        }
+    }
+    @media screen and (max-width: 475px) {
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        &__item {
+            padding: 5px 5px 20px;
+            width: 25%;
+            height: 70px;
+            &-title {
+                white-space: pre-wrap;
+                height: 100%;
+                font-size: 11px;
+            }
+            &--register {
+                margin-bottom: -10px;
+            }
         }
     }
     
