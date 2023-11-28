@@ -8,9 +8,35 @@
     background-color: var(--bg-secondary);
     box-shadow: 15px 15px 0 var(--bg-primary);
     color: #fff;
-    text-align: center;
+    // text-align: center;
     height: 100%;
     transition: all 400ms;
+    position: relative;
+    z-index: 1;
+    @media screen and (min-width: 768px) {
+        &:before {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 80%;
+            position: absolute;
+            background-image: url(../images/dist/classroom.jpg);
+            background-size: cover;
+            background-position: center;
+            left: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+            border-radius: 1rem 0 0 1rem;
+            opacity: 0.8;
+            transition: all 400ms;
+        }
+        &:hover:before {
+            left: calc(50% + 15px);
+            opacity: 1;
+            border-radius: 1rem;
+        }
+    }
     &:hover {
         box-shadow: 0px 0px 0 var(--bg-primary);
     }
