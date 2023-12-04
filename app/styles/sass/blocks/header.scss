@@ -9,6 +9,8 @@
     backdrop-filter: blur(10px);
     background-color: var(--bg-secondary-dark);
     color: var(--text-secondary);
+    animation: fadeInDown;
+    animation-duration: 400ms;
     &__inner {
         display: flex;
         justify-content: space-between;
