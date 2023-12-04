@@ -195,6 +195,9 @@
         flex-direction: column;
         justify-content: space-between;
         height: calc(100vh - 100%);
+        @supports (height: calc(100dvh - 100%)) {
+          height: calc(100dvh - 100%);
+        }
         &:before {
           content: "";
           display: block;

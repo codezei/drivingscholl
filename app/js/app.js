@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	smoothScroll() 
 	lazyVideo()
 	parkSlider()
+	toggleVisibility()
 })
 
 if (document.documentElement.clientWidth < 480) {
@@ -193,6 +194,7 @@ function lazyVideo () {
 			let iframe = document.createElement('iframe')
 			iframe.setAttribute('src', 'https://www.youtube.com/embed/'+e.currentTarget.dataset.id)
 			iframe.classList.add('iframe')
+			iframe.setAttribute('title', e.currentTarget.dataset.title)
 			iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture')
 			e.currentTarget.replaceWith(iframe)
 		})
@@ -206,7 +208,29 @@ function lazyMap () {
 		let iframe = document.createElement('iframe')
 		iframe.setAttribute('src', maps[i].dataset.src)
 		iframe.setAttribute('height', 450)
+		iframe.setAttribute('title', maps[i].dataset.title)
 		iframe.classList.add('iframe')
 		maps[i].replaceWith(iframe)
+	}
+}
+
+function toggleVisibility () {
+	let buttons = document.querySelectorAll('.js-group-btn')
+	let groups = document.querySelectorAll('.js-group')
+	let activeBtn = buttons[0]
+	let activeGroup = groups[0]
+
+	for(let i = 0; i < buttons.length; i++) {
+		buttons[i].addEventListener('click', function (e) {
+			if (activeBtn !== e.currentTarget) {
+				activeBtn.classList.remove('active')
+				activeBtn = e.currentTarget
+				activeBtn.classList.add('active')
+
+				activeGroup.classList.remove('active')
+				activeGroup = document.querySelector('.js-group[data-target="'+e.currentTarget.dataset.target+'"]')
+				activeGroup.classList.add('active')
+			}
+		})
 	}
 }
